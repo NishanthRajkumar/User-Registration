@@ -8,13 +8,15 @@ namespace UserRegistration;
 internal class Registration
 {
     private string firstName;
+    private string lastName;
 
     public void GetInfo()
     {
         firstName = GetValidName("First Name: ");
+        lastName = GetValidName("Last Name: ");
     }
 
-    private string GetValidName(string message)
+    private static string GetValidName(string message)
     {
         string name;
         do
@@ -28,7 +30,7 @@ internal class Registration
         } while (true);
     }
 
-    private bool IsValidName(string name)
+    private static bool IsValidName(string name)
     {
         string pattern = @"^[A-Z][a-zA-Z]{2,}$";
         return Regex.IsMatch(name, pattern);
