@@ -1,4 +1,8 @@
-﻿Console.Title = "User Registration";
+﻿using UserRegistration;
+
+Console.Title = "User Registration";
 Console.WriteLine("==========User Registration==========");
 
-Console.ReadKey();
+Registration form = new Registration();
+
+form.GetInfo();
