@@ -8,13 +8,15 @@ namespace UserRegistration;
 internal class Registration
 {
     // RegEx patterns for various types of information
-    private const string namePattern = @"^[A-Z][a-zA-Z]{2,}$";
-    private const string emailPattern = @"^[A-Za-z0-9]{3,}([.][A-Za-z0-9]{3,})?[@][a-zA-Z]{2,}[.][a-zA-Z]{2,}([.][a-zA-Z]{2})?$";
+    const string namePattern = @"^[A-Z][a-zA-Z]{2,}$";
+    const string emailPattern = @"^[A-Za-z0-9]{3,}([.][A-Za-z0-9]{3,})?[@][a-zA-Z]{2,}[.][a-zA-Z]{2,}([.][a-zA-Z]{2})?$";
+    const string mobilePattern = @"^[0-9]{2}[ ][0-9]{10}$";
 
     // Registration details of user
     private string firstName;
     private string lastName;
     private string email;
+    private string mobile;
 
     /// <summary>
     /// Gets the information from user.
@@ -24,6 +26,7 @@ internal class Registration
         firstName = GetValidInfo("First Name: ", namePattern);
         lastName = GetValidInfo("Last Name: ", namePattern);
         email = GetValidInfo("Email: ", emailPattern);
+        mobile = GetValidInfo("Mobile: ", mobilePattern);
     }
 
     /// <summary>
@@ -41,7 +44,7 @@ internal class Registration
             if (IsValid(info, pattern))
                 return info;
             else
-                Console.WriteLine("Invalid! (First letter caps, Min 3 characters)");
+                Console.WriteLine("Invalid!");
         } while (true);
     }
 
