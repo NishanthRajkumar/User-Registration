@@ -8,10 +8,10 @@ namespace UserRegistration;
 public class Registration
 {
     // RegEx patterns for various types of information
-    const string namePattern = @"^[A-Z][a-zA-Z]{2,}$";
-    const string emailPattern = @"^[A-Za-z0-9]{3,}([\.\-\+][A-Za-z0-9]{3,})?[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}([.][a-zA-Z]{2,})?$";
-    const string mobilePattern = @"^[0-9]{2}[ ][0-9]{10}$";
-    const string passwordPattern = @"^(?!.*[!@#&()–\[{}\]:;',?/*~$^+=<>].*[!@#&()–\[{}\]:;',?/*~$^+=<>])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+    public const string NAME_PATTERN = @"^[A-Z][a-zA-Z]{2,}$";
+    public const string EMAIL_PATTERN = @"^[A-Za-z0-9]{3,}([\.\-\+][A-Za-z0-9]{3,})?[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}([.][a-zA-Z]{2,})?$";
+    public const string MOBILE_PATTERN = @"^[0-9]{2}[ ][0-9]{10}$";
+    public const string PASSWORD_PATTERN = @"^(?!.*[!@#&()–\[{}\]:;',?/*~$^+=<>].*[!@#&()–\[{}\]:;',?/*~$^+=<>])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 
     // Registration details of user
     private string firstName;
@@ -25,11 +25,11 @@ public class Registration
     /// </summary>
     public void GetInfo()
     {
-        firstName = GetValidInfo("First Name: ", namePattern);
-        lastName = GetValidInfo("Last Name: ", namePattern);
-        email = GetValidInfo("Email: ", emailPattern);
-        mobile = GetValidInfo("Mobile: ", mobilePattern);
-        password = GetValidInfo("Password: ", passwordPattern);
+        firstName = GetValidInfo("First Name: ", NAME_PATTERN);
+        lastName = GetValidInfo("Last Name: ", NAME_PATTERN);
+        email = GetValidInfo("Email: ", EMAIL_PATTERN);
+        mobile = GetValidInfo("Mobile: ", MOBILE_PATTERN);
+        password = GetValidInfo("Password: ", PASSWORD_PATTERN);
     }
 
     /// <summary>
