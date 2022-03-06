@@ -40,15 +40,27 @@ public class Registration
     private static string GetValidInfo(string message, string pattern)
     {
         string info;
-        do
+        try
         {
-            Console.Write(message);
-            info = Console.ReadLine();
-            if (IsValid(info, pattern))
-                return info;
-            else
-                Console.WriteLine("Invalid!");
-        } while (true);
+            do
+            {
+                Console.Write(message);
+                info = Console.ReadLine();
+                if (IsValid(info, pattern))
+                    return info;
+                else
+                    Console.WriteLine("Invalid!");
+            } while (true);
+        }
+        catch (NullReferenceException)
+        {
+            Console.WriteLine("Cannot give empty or null information");
+        }
+        catch
+        {
+            Console.WriteLine("Unkown error occured");
+        }
+        return null;
     }
 
     /// <summary>
