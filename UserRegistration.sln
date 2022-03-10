@@ -5,7 +5,12 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserRegistration", "UserRegistration\UserRegistration.csproj", "{F3CC5058-9054-421A-B3F8-2E789A913783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationUnitTesting", "RegistrationUnitTesting\RegistrationUnitTesting.csproj", "{A842F347-DECF-49D4-9FF1-FF62E5A78380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistrationUnitTesting", "RegistrationUnitTesting\RegistrationUnitTesting.csproj", "{A842F347-DECF-49D4-9FF1-FF62E5A78380}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CFF396B-CCE4-4DD0-AA56-EA03C8F10381}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
